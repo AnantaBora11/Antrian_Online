@@ -1,5 +1,8 @@
+#Demo
+https://github.com/user-attachments/assets/dbbe57f1-ce70-4c2f-8d43-df1ad916c2b8
+
 # Database
-Tabel users menyimpan data admin yang mengoperasikan sistem. Tabel layanan menyimpan jenis layanan (Poli Umum, Poli Gigi, Farmasi) dengan kode unik sebagai awalan nomor antrian. Tabel loket mencatat loket pelayanan yang terhubung ke layanan tertentu. Tabel antrian menyimpan data setiap nomor antrian beserta status, waktu, dan relasinya ke layanan, loket, dan user yang memanggil.
+Tabel users menyimpan data admin yang mengoperasikan sistem. Tabel layanan menyimpan jenis layanan (Poli Umum, Poli Gigi, Farmasi) dengan kode unik sebagai awalan nomor antrian. Tabel loket mencatat loket pelayanan yang terhubung ke layanan tertentu. Tabel antrian menyimpan data setiap nomor antrian beserta status, waktu, dan relasinya ke layanan, loket, dan user yang memanggil, data poli dan admin/petugas dimasukan lewat seeder.
 
 Relasi:
 - **Layanan → Loket (1:N)** — satu layanan bisa punya banyak loket.  
