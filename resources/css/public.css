@@ -1,0 +1,385 @@
+/* ========================================
+   PUBLIC PAGE — Antrian Online (Clean White)
+   ======================================== */
+
+/* --- Body & Background --- */
+.public-body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background: #f5f5f5;
+    color: #1e293b;
+}
+
+/* --- Header --- */
+.public-header {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+}
+
+.public-header .logo-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.public-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+.public-header .clock {
+    font-size: 1rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+/* --- Grid Layanan --- */
+.layanan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 3rem;
+}
+
+/* --- Card Layanan --- */
+.layanan-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* Card Header */
+.layanan-card .card-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.layanan-card .card-header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.layanan-card .card-header .kode-badge {
+    background: #3b82f6;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+/* Nomor Dipanggil */
+.nomor-dipanggil {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.nomor-dipanggil .label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.nomor-dipanggil .nomor {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    min-height: 3.5rem;
+}
+
+.nomor-dipanggil .nomor.aktif {
+    color: #3b82f6;
+}
+
+.nomor-dipanggil .nomor.kosong {
+    color: #cbd5e1;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.nomor-dipanggil .loket-info {
+    font-size: 0.85rem;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* Stats Row */
+.stats-row {
+    display: flex;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.stats-row .stat {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+}
+
+.stats-row .stat:not(:last-child) {
+    border-right: 1px solid #e2e8f0;
+}
+
+.stats-row .stat .stat-value {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.stats-row .stat .stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-top: 0.15rem;
+}
+
+/* Daftar Antrian Menunggu */
+.waiting-list {
+    padding: 1rem 1.5rem;
+}
+
+.waiting-list .list-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.waiting-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+.waiting-list ul::-webkit-scrollbar {
+    width: 4px;
+}
+
+.waiting-list ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.waiting-list ul::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+.waiting-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.waiting-list li .waiting-code {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.9rem;
+}
+
+.waiting-list li .waiting-time {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.waiting-list .empty-state {
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    padding: 1rem 0;
+    font-style: italic;
+}
+
+/* Tombol Ambil Antrian */
+.card-footer {
+    padding: 1rem 1.5rem 1.25rem;
+}
+
+.btn-ambil {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: #3b82f6;
+    color: #fff;
+    letter-spacing: 0.02em;
+}
+
+.btn-ambil:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* --- Footer --- */
+.public-footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    border-top: 1px solid #e2e8f0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Modal Tiket --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 360px;
+    width: 90%;
+}
+
+.modal-content .ticket-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.modal-content .ticket-label {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.modal-content .ticket-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #3b82f6;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+}
+
+.modal-content .ticket-layanan {
+    font-size: 1rem;
+    color: #6366f1;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.btn-close-modal {
+    padding: 0.6rem 2rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    background: transparent;
+    color: #64748b;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- Live Indicator --- */
+.live-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #22c55e;
+    margin-top: 0.5rem;
+}
+
+.live-dot {
+    width: 6px;
+    height: 6px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .public-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .layanan-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nomor-dipanggil .nomor {
+        font-size: 2.75rem;
+    }
+
+    .modal-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .modal-content .ticket-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .public-header {
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .public-header h1 {
+        font-size: 1.25rem;
+    }
+}
